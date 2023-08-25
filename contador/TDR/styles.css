@@ -69,11 +69,14 @@ h1 {
     color: white;
     border-radius: 18px;
     cursor: pointer;
-    background-color: #0093E9;
+    /* background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+     */
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
     
 }
-
+        
 ul {
     list-style: none;
     padding: 0;
