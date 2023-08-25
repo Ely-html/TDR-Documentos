@@ -1,4 +1,4 @@
-window.onload = saludar();
+// window.onload = saludar();
 
 let timerInterval;
 let timerRunning = false;
@@ -27,8 +27,10 @@ function addTask() {
         taskList.appendChild(li);
         taskInput.value = '';    
     }
-    startTimer(updateClock, 1000);
-}
+    if (!timerRunning){
+        startTimer(updateClock, 1000);
+    }
+} 
     
 function completeTask(button) {
     const li = button.parentElement;
@@ -37,11 +39,11 @@ function completeTask(button) {
     
     const taskTime = document.getElementById('clock-display').textContent;
     const elapsedTime = calculateElapsedTime(taskTime, previousTaskTime); 
-    li.innerHTML += `<span class="completed-time">Tiempo transcurrido: ${elapsedTime}</span>`;
+    li.innerHTML += `<span class="completed-time">${elapsedTime}</span>`;
     
     
     previousTaskTime = taskTime;
-    stopTimer();
+    // stopTimer();
 }
 
 function calculateElapsedTime(currentTime, previousTime) {
